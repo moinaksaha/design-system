@@ -1,0 +1,37 @@
+{
+  "color": {
+    "primary": {
+      "base": {
+        "value": "rgba(108,203,136,1)"
+      },
+      "light": {
+        "value": "rgba(153,217,170,1)"
+      },
+      "dark": {
+        "value": "rgba(22,180,87,1)"
+      }
+    },
+    "secondary": {
+      "base": {
+        "value": "rgba(18,49,86,1)"
+      },
+      "light": {
+        "value": "rgba(23,65,110,1)"
+      },
+      "dark": {
+        "value": "rgba(12,33,59,1)"
+      }
+    },
+    "tertiary": {
+      "base": {
+        "value": "rgba(224,116,104,1)"
+      },
+      "light": {
+        "value": "rgba(255,164,150,1)"
+      },
+      "dark": {
+        "value": "rgba(170,68,61,1)"
+      }
+    }
+  }
+}
