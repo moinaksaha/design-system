@@ -1,0 +1,50 @@
+{
+  "name": "@comeon/design-system",
+  "version": "0.1.0",
+  "description": "Saber design system",
+  "main": "design-tokens/mod.js",
+  "scripts": {
+    "dev": "es-dev-server",
+    "build": "node --experimental-modules tokens.mjs",
+    "start": "node --experimental-modules server.js",
+    "sketch": "node --experimental-modules sketch.js",
+    "compile:www": "npx babel www --out-dir dist/www",
+    "compile:core": "npx babel core --out-dir dist/core",
+    "compile:comeon": "npx babel comeon --out-dir dist/comeon",
+    "compile": "rm -rf dist && npm run compile:www && npm run compile:core && npm run compile:comeon"
+  },
+  "repository": "git+https://github.com/comeon-stockholm/design-system.git",
+  "keywords": [
+    "Design",
+    "System"
+  ],
+  "author": "Dilip Kr. Shukla <dilip.shukla@comeon.com>",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/comeon-stockholm/design-system/issues"
+  },
+  "homepage": "https://github.com/comeon-stockholm/design-system#readme",
+  "type": "module",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "koa": "^2.8.2",
+    "koa-static": "^5.0.0",
+    "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@comeon/babel-preset-comeon": "^4.0.1",
+    "@comeon/prettier-config": "^1.2.1",
+    "babel-register": "^6.26.0",
+    "dotenv": "^8.1.0",
+    "es-dev-server": "^1.18.3",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "rollup": "^1.22.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "style-dictionary": "^2.8.2"
+  }
+}
