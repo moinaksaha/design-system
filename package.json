@@ -2,7 +2,7 @@
   "name": "@comeon/design-system",
   "version": "0.1.0",
   "description": "Saber design system",
-  "main": "design-tokens/mod.js",
+  "files": ["dist"],
   "scripts": {
     "dev": "es-dev-server",
     "build": "node --experimental-modules tokens.mjs",
