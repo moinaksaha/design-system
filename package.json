@@ -2,11 +2,11 @@
   "name": "@comeon-stockholm/design-system",
   "version": "0.1.0",
   "description": "Saber design system",
-  "main": "mod.mjs",
-  "module": "mod.mjs",
+  "main": "mod.js",
+  "module": "mod.js",
   "files": [
     "dist",
-    "mod.mjs"
+    "mod.js"
   ],
   "exports": {
     "./blitzino/": "./dist/blitzino/",
