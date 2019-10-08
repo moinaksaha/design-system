@@ -1,8 +1,27 @@
 {
-  "name": "@comeon/design-system",
+  "name": "@comeon-stockholm/design-system",
   "version": "0.1.0",
   "description": "Saber design system",
-  "files": ["dist"],
+  "main": "mod.mjs",
+  "module": "mod.mjs",
+  "files": [
+    "dist",
+    "mod.mjs"
+  ],
+  "exports": {
+    "./blitzino/": "./dist/blitzino/",
+    "./casinostugan/": "./dist/casinostugan/",
+    "./comeon/": "./dist/comeon/",
+    "./folkeautomaten/": "./dist/folkeautomaten/",
+    "./galaksino/": "./dist/galaksino/",
+    "./getlucky/": "./dist/getlucky/",
+    "./hajper/": "./dist/hajper/",
+    "./mobilautomaten/": "./dist/mobilautomaten/",
+    "./mobilebet/": "./dist/mobilebet/",
+    "./pzbuk/": "./dist/pzbuk/",
+    "./snabbare/": "./dist/snabbare/",
+    "./suomikasino/": "./dist/suomikasino/"
+  },
   "scripts": {
     "dev": "es-dev-server",
     "build": "node --experimental-modules tokens.mjs",
@@ -11,7 +30,8 @@
     "compile:www": "npx babel www --out-dir dist/www",
     "compile:core": "npx babel core --out-dir dist/core",
     "compile:comeon": "npx babel comeon --out-dir dist/comeon",
-    "compile": "rm -rf dist && npm run compile:www && npm run compile:core && npm run compile:comeon"
+    "compile": "rm -rf dist && npm run compile:www && npm run compile:core && npm run compile:comeon",
+    "prepublish": "npm run build"
   },
   "repository": "git+https://github.com/comeon-stockholm/design-system.git",
   "keywords": [
@@ -30,8 +50,7 @@
   },
   "dependencies": {
     "koa": "^2.8.2",
-    "koa-static": "^5.0.0",
-    "styled-components": "^4.4.0"
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
@@ -41,6 +60,7 @@
     "babel-register": "^6.26.0",
     "dotenv": "^8.1.0",
     "es-dev-server": "^1.18.3",
+    "prettier": "^1.18.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "rollup": "^1.22.0",
