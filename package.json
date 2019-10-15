@@ -2,41 +2,54 @@
   "name": "@comeon-stockholm/design-system",
   "version": "0.1.0",
   "description": "Saber design system",
-  "main": "mod.js",
-  "module": "mod.js",
+  "main": "dist/mod.js",
+  "module": "dist/mod.js",
   "files": [
-    "dist",
-    "mod.js"
+    "dictionary",
+    "dist"
   ],
   "exports": {
+    ".": "./dist/mod.js",
+    "./blitzino": "./dist/blitzino/mod.js",
     "./blitzino/": "./dist/blitzino/",
+    "./casinostugan": "./dist/casinostugan/mod.js",
     "./casinostugan/": "./dist/casinostugan/",
+    "./comeon": "./dist/comeon/mod.js",
     "./comeon/": "./dist/comeon/",
+    "./folkeautomaten": "./dist/folkeautomaten/mod.js",
     "./folkeautomaten/": "./dist/folkeautomaten/",
+    "./galaksino": "./dist/galaksino/mod.js",
     "./galaksino/": "./dist/galaksino/",
+    "./getlucky": "./dist/getlucky/mod.js",
     "./getlucky/": "./dist/getlucky/",
+    "./hajper": "./dist/hajper/mod.js",
     "./hajper/": "./dist/hajper/",
+    "./mobilautomaten": "./dist/mobilautomaten/mod.js",
     "./mobilautomaten/": "./dist/mobilautomaten/",
+    "./mobilebet": "./dist/mobilebet/mod.js",
     "./mobilebet/": "./dist/mobilebet/",
+    "./pzbuk": "./dist/pzbuk/mod.js",
     "./pzbuk/": "./dist/pzbuk/",
+    "./snabbare": "./dist/snabbare/mod.js",
     "./snabbare/": "./dist/snabbare/",
+    "./suomikasino": "./dist/suomikasino/mod.js",
     "./suomikasino/": "./dist/suomikasino/"
   },
   "scripts": {
+    "clean": "rm -rf dist",
+    "debug": "tsc --traceResolution",
     "dev": "es-dev-server",
-    "build": "node --experimental-modules tokens.mjs",
-    "start": "node --experimental-modules server.js",
-    "sketch": "node --experimental-modules sketch.js",
-    "compile:www": "npx babel www --out-dir dist/www",
-    "compile:core": "npx babel core --out-dir dist/core",
-    "compile:comeon": "npx babel comeon --out-dir dist/comeon",
-    "compile": "rm -rf dist && npm run compile:www && npm run compile:core && npm run compile:comeon",
-    "prepublish": "npm run build"
+    "prebuild": "npm run clean",
+    "build:type": "tsc --build",
+    "build:tokens": "node --experimental-modules build-tokens.mjs",
+    "build": "npm run build:tokens && npm run build:type",
+    "postbuild": "npm run build-storybook",
+    "storybook": "npm run build && start-storybook -p 6006",
+    "build-storybook": "build-storybook -c .storybook -o public"
   },
   "repository": "git+https://github.com/comeon-stockholm/design-system.git",
   "keywords": [
-    "Design",
-    "System"
+    "Design System"
   ],
   "author": "Dilip Kr. Shukla <dilip.shukla@comeon.com>",
   "license": "UNLICENCED",
@@ -44,27 +57,38 @@
     "url": "https://github.com/comeon-stockholm/design-system/issues"
   },
   "homepage": "https://github.com/comeon-stockholm/design-system#readme",
-  "type": "module",
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "dependencies": {
-    "koa": "^2.8.2",
-    "koa-static": "^5.0.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@comeon/babel-preset-comeon": "^4.0.1",
     "@comeon/prettier-config": "^1.2.1",
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-docs": "^5.2.3",
+    "@storybook/addon-links": "^5.2.3",
+    "@storybook/addons": "^5.2.3",
+    "@storybook/react": "^5.2.3",
+    "@types/node": "^12.7.12",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "@types/styled-components": "^4.1.19",
+    "babel-loader": "^8.0.6",
     "babel-register": "^6.26.0",
     "dotenv": "^8.1.0",
     "es-dev-server": "^1.18.3",
+    "koa": "^2.8.2",
+    "koa-static": "^5.0.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "rollup": "^1.22.0",
     "rollup-plugin-postcss": "^2.0.3",
-    "style-dictionary": "^2.8.2"
+    "style-dictionary": "^2.8.2",
+    "styled-components": "^4.4.0",
+    "typescript": "^3.7.0-beta"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

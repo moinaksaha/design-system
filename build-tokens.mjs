@@ -5,7 +5,7 @@ const { readdir } = fs.promises;
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
 function getStyleDictionaryConfig(brand) {
-	const buildPath = `dist/${brand}/`;
+	const buildPath = `dictionary/${brand}/`;
 	return {
 		source: [`tokens/${brand}/**/*.json`],
 		platforms: {
@@ -30,7 +30,7 @@ function getStyleDictionaryConfig(brand) {
 				files: [
 					{
 						format: 'javascript/es6',
-						destination: 'constants.mjs'
+						destination: 'constants.js'
 					}
 				]
 			},

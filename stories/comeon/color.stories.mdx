@@ -1,0 +1,17 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import * as colors from '../../dist/dictionary/comeon/constants.js';
+
+<Meta title="MDX|Colors" />
+
+# Colors
+
+<Preview>
+	<Story name="all colors">
+		{Object.entries(colors).map(([colorName, colorValue]) => (
+			<label>
+				{colorName}: {colorValue}
+				<input type="color" value={colorValue} disabled />
+			</label>
+		))}
+	</Story>
+</Preview>
