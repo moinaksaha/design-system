@@ -1,6 +1,6 @@
 {
     "name": "design-system",
     "version": 2,
-    "alias": ["design-system", "saber-design-system"],
+    "alias": ["saber-design-system"],
     "scope": "drfront"
 }
