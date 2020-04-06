@@ -1,0 +1,1 @@
+// export { PaletteSCSS } from '../core/mod.js';

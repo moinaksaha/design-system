@@ -3,11 +3,8 @@ import './style.scss';
 
 /**
  * Palette to show the color scheme of any Product-line(Brand)
- * @param {string} className - HTML Classname for the color(as per core.css)
- * @param {string} colorName - Color Name from directory(Figma/Sketch)
- * @param {string} colorValue - Hex value of Color
  */
-function Palette({colorName, colorValue, className }) {
+function PaletteSCSS({colorName='', colorValue='', className='' }) {
 	return (
 		<div
 			className={`palette ${className}`} 
@@ -18,4 +15,4 @@ function Palette({colorName, colorValue, className }) {
 	);
 }
 
-export default Palette;
+export default PaletteSCSS;
