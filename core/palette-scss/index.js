@@ -1,10 +1,10 @@
 import React from 'react';
-import './core.css';
+import './style.scss';
 
 /**
  * Palette to show the color scheme of any Product-line(Brand)
  */
-function Palette({colorName='', colorValue='', className='' }) {
+function PaletteSCSS({colorName='', colorValue='', className='' }) {
 	return (
 		<div
 			className={`palette ${className}`} 
@@ -16,4 +16,4 @@ function Palette({colorName='', colorValue='', className='' }) {
 	);
 }
 
-export default Palette;
+export default PaletteSCSS;
