@@ -1,0 +1,72 @@
+.palette{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
+}
+.palette-color-name{
+    padding: 2px;
+}
+.palette-color-value{
+    padding: 2px;
+}
+.primary-base{
+    background: $color-primary-base;
+}
+.primary-light{
+    background: $color-primary-light;
+}
+.primary-dark{
+    background: $color-primary-dark;
+}
+.secondary-base{
+    background: $color-secondary-base;
+}
+.secondary-light{
+    background: $color-secondary-light;
+}
+.secondary-dark{
+    background: $color-secondary-dark;
+}
+.tertiary-base{
+    background: $color-tertiary-base;
+}
+.tertiary-light{
+    background: $color-tertiary-light;
+}
+.tertiary-dark{
+    background: $color-tertiary-dark;
+}
+.red-50{
+    background: $color-red-50;
+}
+.red-100{
+    background: $color-red-100;
+}
+.red-200{
+    background: $color-red-200;
+}
+.red-300{
+    background: $color-red-300;
+}
+.red-400{
+    background: $color-red-400;
+}
+.red-500{
+    background: $color-red-500;
+}
+.red-600{
+    background: $color-red-600;
+}
+.red-700{
+    background: $color-red-700;
+}
+.red-800{
+    background: $color-red-800;
+}
+.red-900{
+    background: $color-red-900;
+}
