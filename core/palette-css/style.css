@@ -13,6 +13,10 @@
 .palette-color-value{
     padding: 2px;
 }
+.palette-class-name{
+    padding: 2px;
+    font-style: italic;
+}
 .primary-base{
     background: var(--color-primary-base);
 }

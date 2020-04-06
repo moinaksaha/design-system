@@ -1,3 +1,5 @@
+@import '../../dictionary/comeon/_variables.scss';
+
 .palette{
     display: flex;
     flex-direction: column;
@@ -12,6 +14,10 @@
 }
 .palette-color-value{
     padding: 2px;
+}
+.palette-class-name{
+    padding: 2px;
+    font-style: italic;
 }
 .primary-base{
     background: $color-primary-base;
