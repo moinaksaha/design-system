@@ -33,6 +33,7 @@ bower_components
 build/Release
 dist
 dictionary
+public
 
 # Dependency directories
 node_modules/
