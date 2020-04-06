@@ -1,1 +1,1 @@
-// export { PaletteSCSS } from '../core/mod.js';
+export { PaletteSCSS } from '../core/mod.js'

@@ -1,0 +1,35 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import * as colors from '../../dist/dictionary/comeon/constants.js';
+import '../../dictionary/comeon/_variables.scss';
+
+import { PaletteSCSS } from '../../core/mod.js';
+
+<Meta title="Comeon|PaletteSCSS" />
+
+# PaletteSCSS 
+
+<Preview>
+	<Story name="PaletteSCSS">
+		<article
+			style={{
+				display: 'grid',
+				gridTemplateColumns: 'repeat(3, 1fr)',
+				gridGap: '10px',
+				gridAutoRows: 'minmax(100px, auto)'
+			}}
+		>
+			{Object.entries(colors).map(([colorName, colorValue]) => (
+                <PaletteSCSS 
+					className={colorName.toLowerCase().split("_").join("-")} 
+					colorName={colorName}
+					colorValue={colorValue} 
+				/>
+			))}
+		</article>
+	</Story>
+</Preview>
+
+
+
+
+
