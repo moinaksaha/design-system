@@ -1,9 +1,13 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import * as colors from '../../dist/dictionary/comeon/constants.js';
+import '../../dictionary/comeon/_variables.scss';
 
-<Meta title="Comeon|Color System" />
+<!-- // import '../../comeon/palette-style.scss'; -->
+import { Palette } from '../../core/mod.js';
 
-# Palette
+<Meta title="Comeon|Palette" />
+
+# Palette 
 
 <Preview>
 	<Story name="Palette">
@@ -16,11 +20,11 @@ import * as colors from '../../dist/dictionary/comeon/constants.js';
 			}}
 		>
 			{Object.entries(colors).map(([colorName, colorValue]) => (
-				<label>
-					{colorName}
-					<input type="color" value={colorValue} disabled style={{display: 'block'}} />
-					{colorValue}
-				</label>
+                <Palette 
+					className={colorName.toLowerCase().split("_").join("-")} 
+					colorName={colorName}
+					colorValue={colorValue} 
+				/>
 			))}
 		</article>
 	</Story>
