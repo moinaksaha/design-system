@@ -1,5 +1,5 @@
 import React from 'react';
-import './core-palette.scss';
+// import './core-palette.scss';
 
 /**
  * Palette to show the color scheme of any Product-line(Brand)
