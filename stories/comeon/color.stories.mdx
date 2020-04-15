@@ -1,8 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import * as colors from '../../dist/dictionary/comeon/constants.js';
-// import '../../dictionary/comeon/_variables.scss';
 
-import '../../comeon/palette-style.scss';
 import { Palette } from '../../comeon/mod.js';
 
 <Meta title="Comeon|Palette" />
@@ -10,7 +8,9 @@ import { Palette } from '../../comeon/mod.js';
 # Palette 
 
 <Preview>
-	<Story name="Palette">
+	<Story name="Palette"
+		parameters={{ styles: [require('!style-loader!css-loader!sass-loader!../../comeon/palette-style.scss?story')]}}
+	>
 		<article
 			style={{
 				display: 'grid',

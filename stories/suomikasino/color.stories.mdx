@@ -1,12 +1,16 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import * as colors from '../../dist/dictionary/suomikasino/constants.js';
 
+import { Palette } from '../../suomikasino/mod.js';
+
 <Meta title="Suomikasino|Color System" />
 
-# Palette
+# Palette 
 
 <Preview>
-	<Story name="Palette">
+	<Story name="Palette"
+		parameters={{ styles: [require('!style-loader!css-loader!sass-loader!../../suomikasino/palette-style.scss?story')]}}
+	>
 		<article
 			style={{
 				display: 'grid',
@@ -16,11 +20,11 @@ import * as colors from '../../dist/dictionary/suomikasino/constants.js';
 			}}
 		>
 			{Object.entries(colors).map(([colorName, colorValue]) => (
-				<label>
-					{colorName}
-					<input type="color" value={colorValue} disabled style={{display: 'block'}} />
-					{colorValue}
-				</label>
+                <Palette 
+					className={colorName.toLowerCase().split("_").join("-")} 
+					colorName={colorName}
+					colorValue={colorValue} 
+				/>
 			))}
 		</article>
 	</Story>
