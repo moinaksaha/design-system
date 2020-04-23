@@ -1,5 +1,5 @@
 import React from 'react';
-import './core.css';
+// import './core.css';
 
 /**
  * @param {React.ButtonHTMLAttributes<HTMLButtonElement>} props

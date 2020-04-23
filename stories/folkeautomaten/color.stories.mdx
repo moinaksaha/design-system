@@ -1,12 +1,16 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import * as colors from '../../dist/dictionary/folkeautomaten/constants.js';
 
+import { Palette } from '../../folkeautomaten/mod.js';
+
 <Meta title="Folkeautomaten|Color System" />
 
-# Palette
+# Palette 
 
 <Preview>
-	<Story name="Palette">
+	<Story name="Palette"
+		parameters={{ styles: [require('!style-loader!css-loader!sass-loader!../../folkeautomaten/palette-style.scss?story')]}}
+	>
 		<article
 			style={{
 				display: 'grid',
@@ -16,12 +20,13 @@ import * as colors from '../../dist/dictionary/folkeautomaten/constants.js';
 			}}
 		>
 			{Object.entries(colors).map(([colorName, colorValue]) => (
-				<label>
-					{colorName}
-					<input type="color" value={colorValue} disabled style={{display: 'block'}} />
-					{colorValue}
-				</label>
+                <Palette 
+					className={colorName.toLowerCase().split("_").join("-")} 
+					colorName={colorName}
+					colorValue={colorValue} 
+				/>
 			))}
 		</article>
 	</Story>
 </Preview>
+
